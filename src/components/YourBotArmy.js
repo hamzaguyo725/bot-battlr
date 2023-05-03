@@ -1,6 +1,6 @@
 import React from "react";
 import "../styles/YourBotArmy.css"
-import { NavLink } from "react-router-dom";
+import { NavLink } from 'react-router-dom'
 
 function YourBotArmy({handleSort}) {
     return ( 

@@ -2,7 +2,6 @@ import { React,useEffect,useState }  from "react";
 import { NavLink } from "react-router-dom";
 import "../styles/BotProfile.css"
 
-import OneBot from "./OneBot";
 import { useHistory } from "react-router-dom"
 
 function BotProfile({deleteWithoutRefresh,id,image,name,phrase,health,armor,damage,addBot,handleId}) {
@@ -14,7 +13,7 @@ function BotProfile({deleteWithoutRefresh,id,image,name,phrase,health,armor,dama
  function deleteItem(){
   console.log('deleted')
   setAdded(false)
- fetch (`http://localhost:8002/bots${id}`,{
+ fetch (`https://db-json-mu.vercel.app/bots/${id}`,{
   method : 'DELETE'})
   .then(console.log('deletItem'))
   history.push(`/`)

@@ -22,7 +22,7 @@ function App() {
   let [dataArray,setDataArray] = useState([])
 
 useEffect(()=>{
-  fetch(" http://localhost:8002/bots")
+  fetch("https://db-json-mu.vercel.app/bots")
   .then((res)=> res.json())
   .then((data) =>{
     setBots(data)
@@ -138,6 +138,7 @@ function addBot(id,name,image,phrase,health,armor,damage){
 }
 
   return (
+    <BotProfile />,
     <Router>
     <main>
       <YourBotArmy handleSort={handleSort}/>
